@@ -39,18 +39,25 @@ function setup() {
 
 
 function draw() {
+
   rectMode(CENTER);
   background(0);
   
   paper1.display();
-  dustbin1.diaplay();
-  dustbin2.diaplay();
-  dustbin3.diaplay();
-  ground1.diaplay();
+  dustbin1.display();
+  dustbin2.display();
+  dustbin3.display();
+  ground1.display();
 
   drawSprites();
  
 }
 
+function keyPressed(){
+	if (keyCode===UP_ARROW){
+      Matter.Body.applyForce(paper1.body,paper1.body.position,{x:50,y:-40});
+	}
+
+}
 
 

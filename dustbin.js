@@ -1,6 +1,7 @@
 class Dustbin {
     constructor(x, y, width, height) {
       var options = {
+        isStatic:true,
           'friction':1,
           'density':1.0
       }
@@ -15,7 +16,7 @@ class Dustbin {
       var pos =this.body.position;
       rectMode(CENTER);
       fill("red");
-      rect(0, 0, this.width, this.height);
+      rect(pos.x,pos.y, this.width, this.height);
     }
   };
   
